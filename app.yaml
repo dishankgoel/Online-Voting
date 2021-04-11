@@ -1,0 +1,27 @@
+runtime: python37
+
+instance_class: B2
+
+env_variables:
+    GOOGLE_OAUTH_CLIENT_ID: "288499288570-428gk3445hh48ss71m50q6tukp1ou4im.apps.googleusercontent.com"
+    GOOGLE_OAUTH_CLIENT_SECRET: "GsD6ITLiZQX_Q1sfAgN489kf"
+    OAUTHLIB_RELAX_TOKEN_SCOPE: 1
+    CLOUD_SQL_CONNECTION_NAME: iitgn-online-voting:asia-south1:votes
+    DB_USER: root
+    DB_PASS: vhpDvy4eHC1nnh48
+    DB_NAME: voting2020
+
+handlers:
+
+- url: /.*
+  secure: always
+  redirect_http_response_code: 301
+  script: auto
+
+inbound_services:
+- warmup
+
+manual_scaling:
+  instances: 1
+# automatic_scaling:
+# - min_num_instances: 1

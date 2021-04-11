@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<!-- Mirrored from students.iitgn.ac.in/Election_Commission/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Aug 2018 10:53:34 GMT -->
+<head>
+  <!-- Site made with Mobirise Website Builder v4.4.0, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Election Commision | IITGN">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/logo2.jpg') }}" type="image/x-icon">
+  <meta name="description" content="">
+  <title>Election Commission | IITGN</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/web/assets/mobirise-icons/mobirise-icons.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/tether/tether.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/soundcloud-plugin/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap-grid.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap-reboot.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/socicon/css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/dropdown/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/animate.css/animate.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/data-tables/data-tables.bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/theme/css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/mobirise/css/mbr-additional.css') }}" type="text/css">
+  <style>
+    .Main{
+        background-color: lightgray;
+    }
+    .Check_box{
+        background-color: whitesmoke;
+    }
+    .row{
+        background-color:white;
+        border-radius: 25px;
+        box-shadow: grey;
+    }
+    .column{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .allign{
+        text-align: center;
+    
+    }
+    .radio_button:checked + .abc {
+        /* border-style: solid;
+        border-color: rgb(105, 201, 68); */
+        background-color: rgb(200, 250, 200);
+    }
+    .check{
+        border-style: solid;
+        border-color: red;
+    }
+    .radio_button{
+        display: none;
+    }
+    .green{
+        border-style: solid;
+        border-color: black;
+    }
+    .green1{
+        text-align: center;
+    }
+
+    .card{
+        cursor: pointer;
+    }
+    .not_filled {
+        background: red;
+    }
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+</head>
+<body class="Main">
+<style type="text/css">
+  .table td, .table th{
+    vertical-align: middle;
+  }
+
+</style>
+<section class="cid-qM9tuExZKb" id="footer1-6" data-rv-view="814">
+<div class="container">
+        <div class="media-container-row content text-white">
+            <div class="col-12 mbr-fonts-style display-7">
+                <h2 class="green1 pb-3">
+                    Student Council Elections 2020
+                </h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+<br>
+<br>
+
+    <div class="container">
+        <form method="POST" action="/process_vote" onsubmit="return validate()">
+            <div id="G" class="row shadow p-3 mb-5 bg-white allign">
+                <div class="col-12 p-2">
+                    <h2 class="text-white p-2 rounded shadow" style="background-color: #2e2e2e;">Post 1</h2>
+                </div>
+                <br>
+                <div class="col-lg-4 col-md-6 col-12 column">
+                    <label>
+                        <input class="radio_button" type="radio" id="g1" name="gsecy" value="0" required>
+                        <div class="card abc">
+                            <div class="card-body" id="G1">
+                                <img class="img-fluid card-img-top green rounded-circle" src="{{ url_for('static', filename='demo.jpg') }}" alt="No image">
+                                <hr>
+                                <h5 class="card-title">Candidate 1</h5>
+                            </div>
+                        </div>
+                    </label>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-12 column">
+                    
+                    <label>
+                        <input class="radio_button" type="radio" id="g2" name="gsecy" value="1" required >
+                        <div class="card abc">
+                            <div class="card-body" id="G2">
+                                <img class="img-fluid card-img-top green rounded-circle" src="{{ url_for('static', filename='demo.jpg') }}" alt="No image">
+                                <hr>
+                                <h5 class="card-title">Candidate 2</h5>
+                            </div>
+                        </div>
+                    </label>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-12 column">
+                    <label>
+                        <input class="radio_button" type="radio" id="g3" name="gsecy" value="2">
+                        <div class="card abc">
+                            <div class="card-body" id="G4">
+                                <img class="img-fluid card-img-top green rounded-circle" src="{{ url_for('static', filename='nota.png') }}" alt="No image">
+                                <hr>
+                                <h5 class="card-title">NOTA</h5>
+                            </div>
+                        </div>
+                    </label>
+                  </div>
+              </div>
+              <br>
+              <div class="row shadow p-3 mb-5 bg-white allign">
+                <div class="col-12 p-2">
+                    <h2 class="text-white p-2 rounded shadow" style="background-color: #2e2e2e;">Post 2</h2>
+                </div>
+                <br>
+                <div class="col-lg-4 col-md-6 col-12 column">
+                    
+                    <label>
+                        <input class="radio_button" type="radio" id="w1" name="wsecy" value="0">
+                        <div class="card abc">
+                            <div class="card-body" id="W1">
+                                <img class="img-fluid card-img-top green rounded-circle" src="{{ url_for('static', filename='demo.jpg') }}" alt="No image">
+                                <hr>
+                                <h5 class="card-title">Candidate 1</h5>
+                            </div>
+                        </div>
+                    </label>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-12 column">
+                    
+                    <label>
+                        <input class="radio_button" type="radio" id="w2" name="wsecy" value="1">
+                        <div class="card abc">
+                            <div class="card-body" id="W2">
+                                <img class="img-fluid card-img-top green rounded-circle" src="{{ url_for('static', filename='demo.jpg') }}" alt="No image">
+                                <hr>
+                                <h5 class="card-title">Candidate 2</h5>
+                            </div>
+                        </div>
+                    </label>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-12 column">
+                    <label>
+                        <input class="radio_button" type="radio" id="w3" name="wsecy" value="2">
+                        <div class="card abc">
+                            <div class="card-body" id="W3">
+                                <img class="img-fluid card-img-top green rounded-circle" src="{{ url_for('static', filename='nota.png') }}" alt="No image">
+                                <hr>
+                                <h5 class="card-title">NOTA</h5>
+                            </div>
+                        </div>
+                    </label>
+                  </div>
+              </div>  
+          <br>
+          <div class="row shadow p-3 mb-5 bg-white allign">
+            <div class="col-12 p-2">
+                <h2 class="text-white p-2 rounded shadow" style="background-color: #2e2e2e;">Post 3</h2>
+            </div>
+            <br>
+            <div class="col-lg-4 col-md-6 col-12 column">
+                <label>
+                    <input class="radio_button" type="radio" id="a1" name="asecy" value="0">
+                    <div class="card abc">
+                        <div class="card-body" id="A1">
+                            <img class="img-fluid card-img-top green rounded-circle" src="{{ url_for('static', filename='demo.jpg') }}" alt="No image">
+                            <hr>
+                            <h5 class="card-title">Candidate 1</h5>
+                        </div>
+                    </div>
+                </label>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12 column">
+                
+                <label>
+                    <input class="radio_button" type="radio" id="a2" name="asecy" value="1">
+                    <div class="card abc">
+                        <div class="card-body" id="A2">
+                            <img class="img-fluid card-img-top green rounded-circle" src="{{ url_for('static', filename='demo.jpg') }}" alt="No image">
+                            <hr>
+                            <h5 class="card-title">Candidate 2</h5>
+                        </div>
+                    </div>
+                </label>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12 column">
+                <label>
+                    <input class="radio_button" type="radio" id="a3" name="asecy" value="2">
+                    <div class="card abc">
+                        <div class="card-body" id="A3">
+                            <img class="img-fluid card-img-top green rounded-circle" src="{{ url_for('static', filename='nota.png') }}" alt="No image">
+                            <hr>
+                            <h5 class="card-title">NOTA</h5>
+                        </div>
+                    </div>
+                </label>
+              </div>
+          </div>
+          <br>
+          
+            <div class="row shadow p-3 mb-5 bg-white">
+                <!-- <div class="col-12 allign">
+                    Please note the following
+                </div> -->
+                <div class="col-12 p-2 allign">
+                    <h4 class="text-white p-2 rounded shadow" style="background-color: #2e2e2e;">Important Note</h4>
+                </div>
+                <br>
+                <div class="col-12 pt-4">
+                    <ul style="font-size: 1.2rem;">
+                        <li>By proceeding further, I hereby declare that I agree to adhere to the IIT Gandhinagar Honour Code.</li>
+                    </ul>
+                </div>
+                <!-- <div class="col-12 allign pt-4" style="font-size: 1.2rem;">
+                    <label>
+                        <input type="checkbox" id="honesty">
+                        I have read the above information.
+                    </label>
+                </div> -->
+                <div class="col-12 allign pt-1 pd-2 custom-control custom-checkbox" style="font-size: 1.2rem;">
+                    <input type="checkbox" class="custom-control-input" id="honesty" name="honesty" value="1">
+                    <label class="custom-control-label" for="honesty">I have read the above information.</label>
+                </div>
+            </div>
+            
+          <div class="green1">
+            <input class="btn-lg btn-outline-dark btm-large green1" type="submit" id="submit "value="Submit">
+            <br>
+            <br>
+            <div class="error-message">
+                
+            </div>
+            
+            <!-- <p1>Please check your choices before clicking submit.</p1> -->
+          </div>
+        </form>
+    </div>
+<br>
+<br>
+<br>
+<section class="cid-qM9tuExZKb" id="footer1-6" data-rv-view="814">
+    <div class="container">
+            <div class="media-container-row content text-white">
+    
+                <div class="col-12 col-md-6 mbr-fonts-style display-7">
+                    <h5 class="pb-3">
+                        Official Email ID : election.commission@iitgn.ac.in
+                    </h5>
+                </div>
+                
+            </div>
+    
+    
+            <div class="media-container-row content text-white">
+    
+                <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                    <h5 class="pb-3">
+                        CHIEF ELECTION COMMISSIONER
+                    </h5>
+                    <p class="mbr-text">
+                      Harsh Kakadiya<br>kakadiya.harsh@iitgn.ac.in
+                    </p>
+                </div>
+                <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                    <h5 class="pb-3">
+                        ELECTION COMMISSIONER
+                    </h5>
+                    <p class="mbr-text">
+                      Shubham Malik<br>malik_shubham@iitgn.ac.in
+                    </p>
+                </div>
+                <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                    <h5 class="pb-3">
+                        TECHNICAL OFFICERS
+                    </h5>
+                    <p class="mbr-text">
+                      Dishank Goel<br>dishank.goel@iitgn.ac.in 
+                      <br><br>
+                      Mihir Jain<br>mihir.jain@iitgn.ac.in
+                      <br><br>
+                      Shruti Prakash Gupta<br>gupta.prakash@iitgn.ac.in<br>
+                    </p>
+                </div>
+                <div class="col-12 col-md-3 mbr-fonts-style display-7">
+                    <h5 class="pb-3">
+                        ELECTION OFFICERS
+                    </h5>
+                    <p class="mbr-text">
+                      Neel Patel<br>neel.kirankumar@iitgn.ac.in
+                      <br><br>
+                      Deepesh Pankaj<br>deepesh.pankaj@iitgn.ac.in
+                      <br><br>
+                      Shril Mody<br>paresh.mody@iitgn.ac.in
+                      <br><br>
+                      Kamlesh Arun Sawadekar<br>kamlesh.arun@iitgn.ac.in
+                    </p>
+                </div>
+            </div>
+            <div class="footer-lower">
+                <div class="media-container-row">
+                    <div class="col-sm-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="media-container-row mbr-white">
+                    <div class="col-sm-6 copyright">
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            © Made by Student Election Commission 2019
+                        </p>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+<script src="{{ url_for('static', filename='assets/web/assets/jquery/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/popper/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/tether/tether.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/dropdown/js/script.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/smooth-scroll/smooth-scroll.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/viewport-checker/jquery.viewportchecker.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/jarallax/jarallax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/data-tables/jquery.data-tables.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/data-tables/data-tables.bootstrap4.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/touch-swipe/jquery.touch-swipe.min.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/theme/js/script.js') }}"></script>
+<script src="{{ url_for('static', filename='assets/formoid/formoid.min.js') }}"></script>
+<script>
+    document.getElementById("g1").addEventListener("invalid", myFunction);
+
+    function myFunction() {
+        $(".error-message").append('<div class="alert alert-danger alert-dismissible fade show" style="font-size: 1.2rem;"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error!</strong> You cannot fill an empty vote for any post</div>');
+    }
+    function validate(){
+        var Gsecy=false;
+        var radios = document.getElementsByName("gsecy");
+        for (var i = 0, len = radios.length; i < len; i++) {
+            if (radios[i].checked) {
+                Gsecy = true;
+            }
+        }
+        var Wsecy=false;
+        var radios = document.getElementsByName("wsecy");
+        for (var i = 0, len = radios.length; i < len; i++) {
+            if (radios[i].checked) {
+                Wsecy = true;
+            }
+        }
+        var Asecy=false;
+        var radios = document.getElementsByName("asecy");
+        for (var i = 0, len = radios.length; i < len; i++) {
+            if (radios[i].checked) {
+                Asecy = true;
+            }
+        }
+        // var Tsecy=false;
+        // var radios = document.getElementsByName("tsecy");
+        // for (var i = 0, len = radios.length; i < len; i++) {
+        //     if (radios[i].checked) {
+        //         Tsecy = true;
+        //     }
+        // }
+        // var Csecy=false;
+        // var radios = document.getElementsByName("csecy");
+        // for (var i = 0, len = radios.length; i < len; i++) {
+        //     if (radios[i].checked) {
+        //         Csecy = true;
+        //     }
+        // }
+        // var Ssecy=false;
+        // var radios = document.getElementsByName("ssecy");
+        // for (var i = 0, len = radios.length; i < len; i++) {
+        //     if (radios[i].checked) {
+        //         Ssecy = true;
+        //     }
+        // }
+        // var Psecy=false;
+        // var radios = document.getElementsByName("psecy");
+        // for (var i = 0, len = radios.length; i < len; i++) {
+        //     if (radios[i].checked) {
+        //         Psecy = true;
+        //     }
+        // }
+        // var Isecy=false;
+        // var radios = document.getElementsByName("isecy");
+        // for (var i = 0, len = radios.length; i < len; i++) {
+        //     if (radios[i].checked) {
+        //         Isecy = true;
+        //     }
+        // }
+        // if (Gsecy & Wsecy & Tsecy & Asecy & Ssecy & Csecy & Psecy & Isecy){
+        if (Gsecy & Wsecy & Asecy){
+            if (document.getElementById("honesty").checked){
+                return true;
+            }
+            else{
+                $(".error-message").append('<div class="alert alert-danger alert-dismissible fade show" style="font-size: 1.2rem;"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error!</strong> Please check the undertaking that you have read the rules</div>');
+                return false;
+            }
+        }
+        else{
+            $(".error-message").append('<div class="alert alert-danger alert-dismissible fade show" style="font-size: 1.2rem;"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error!</strong> You cannot fill an empty vote for any post</div>');
+            return false;
+        }
+
+    }
+</script>
+<input name="animation" type="hidden">
+  </body>
+
+<!-- Mirrored from students.iitgn.ac.in/Election_Commission/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 14 Aug 2018 11:17:19 GMT -->
+</html>
